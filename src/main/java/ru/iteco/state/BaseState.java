@@ -10,6 +10,7 @@ public abstract class BaseState implements State {
 
     @Override
     public void put(Integer value) {
+        value = value == null ? 0 : value;
         System.out.println("Внесено " + value + " рублей");
         context.setValue(value);
     }

@@ -3,7 +3,7 @@ package ru.iteco.state;
 public class CopyrightContext {
 
     private State state;
-    private Integer value;
+    private Integer value = 0;
     private Source source;
     private Document document;
 

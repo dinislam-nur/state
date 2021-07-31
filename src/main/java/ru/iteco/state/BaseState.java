@@ -27,9 +27,9 @@ public abstract class BaseState implements State {
     @Override
     public Integer get() {
         context.setState(new InitState(context));
-        final Integer value = context.getValue();
+        Integer value = context.getValue();
         if (value < 1) {
-            throw new StateException("Ошибка: сдача пустая");
+            System.out.println("Все денежные средства потрачены");
         }
         context.setValue(0);
         return value;

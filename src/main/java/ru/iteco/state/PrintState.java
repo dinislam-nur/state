@@ -16,6 +16,7 @@ public class PrintState extends DocumentState {
         } else {
             context.setValue(newValue);
             System.out.println("Распечатан документ:\n" + context.getDocument());
+            context.setState(new DocumentState(context));
         }
     }
 }
